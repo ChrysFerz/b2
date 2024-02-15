@@ -1,58 +1,73 @@
 .container{
     display: grid;
-    height: 700px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.2fr 1fr 1fr 0.2fr;
-    grid-template-areas: 
-    "nav nav nav nav"
-    "sidebar main main main"
-    "sidebar content1 content2 content3"
-    "sidebar footer footer footer"
-    ;
+    height: 500px;
+    grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 4px;
-    font-family: 'Trebuchet MS';
     text-align: center;
+    grid-template-areas: 
+    "site nav1 nav2 nav3"
+    "title title title bar"
+    "meta content content bar"
+    "meta content content ads"
+    "meta img img ads"
+    "meta img img other"
+    "meta img img other"
+    "footer footer footer footer"
+    ;
 }
-nav{
-    background-color: aqua;
-    grid-area: nav;
+#site{
+    background-color: yellow;
+    grid-area: site;
 }
-main{
-    background-color: aquamarine;
-    grid-area: main;
+#nav1{
+    background-color: palevioletred;
+    grid-area: nav1;
 }
-#content1{
+#nav2{
+    background-color: palevioletred;
+    grid-area: nav2;
+}
+#nav3{
+    background-color: palevioletred;
+    grid-area: nav3;
+}
+#title{
     background-color: lightblue;
-    grid-area: content1;
+    grid-area: title;
 }
-#content2{
-    background-color: aliceblue;
-    grid-area: content2;
+#meta{
+    background-color: lightgreen;
+    grid-area: meta;
 }
-#content3{
-    background-color: aqua;
-    grid-area: content3;
+#content{
+    background-color: lightgray;
+    grid-area: content;
 }
-#sidebar{
-    background-color: aqua;
-    grid-area: sidebar;
+#img{
+    background-color: yellow;
+    grid-area: img;
+}
+#bar{
+    background-color: orange;
+    grid-area: bar;
+}
+#ads{
+    background-color: green;
+    grid-area: ads;
+}
+#other{
+    background-color: magenta;
+    grid-area: other;
 }
 footer{
     background-color: burlywood;
     grid-area: footer;
 }
-@media screen and (max-width:525px){
+@media only screen and (max-width: 600px){
     .container{
-        grid-template-columns: 1fr;
-        grid-template-rows: 0.2fr;
-        grid-template-areas: 
-        "nav"
-        "sidebar"
-        "main"
-        "content1"
-        "content2"
-        "content3"
-        "footer"
-        ;
+        display: grid;
+        grid-gap: 4px;
+        text-align: center;
     }
 }
