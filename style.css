@@ -2,17 +2,17 @@ body{
     margin: 14px;
     display: grid;
     gap: 5px;
-    grid-template-columns: 1fr fr 1fr;
+    grid-template-columns: 1fr  1fr 1fr;
     align-items: center;
     justify-items: center;
     grid-template-areas: 
-    "header nav nav nav"
-     "title title title bar"
-     "meta content content bar"
-     "meta content content ads"
-     "meta contentimg contentimg ads"
-     "meta contentimg contentimg other"
-     "meta contentimg contentimg other"
+    "header header header header"
+     "content content content content"
+     "content content content content"
+     "content content content content"
+     "content content content content"
+     "content content content content"
+     "content content content content"
      "footer footer footer footer"
     ;
 }
@@ -50,5 +50,5 @@ nav{
      background-color: palevioletred;
 }
 article{
-   
+   grid-area: content;
 }
