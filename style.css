@@ -1,0 +1,54 @@
+body{
+    margin: 14px;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 1fr fr 1fr;
+    align-items: center;
+    justify-items: center;
+    grid-template-areas: 
+    "header nav nav nav"
+     "title title title bar"
+     "meta content content bar"
+     "meta content content ads"
+     "meta contentimg contentimg ads"
+     "meta contentimg contentimg other"
+     "meta contentimg contentimg other"
+     "footer footer footer footer"
+    ;
+}
+header{
+    background-color: yellow;
+    grid-area: header;
+}
+#title{
+    background-color: lightblue;
+}
+#meta{
+    background-color: lightgreen;
+}
+#content{
+    background-color: gainsboro;
+}
+#contentimg{
+    background-color: rgb(255, 251, 0);
+}
+#bar{
+    background-color: orange;
+}
+#ads{
+    background-color: green;
+}
+#other{
+    background-color: magenta;
+}
+footer{
+    background-color: burlywood;
+    grid-area: footer;
+}
+nav{
+     grid-area: nav;
+     background-color: palevioletred;
+}
+article{
+   
+}
