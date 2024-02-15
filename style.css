@@ -1,54 +1,58 @@
-body{
-    margin: 14px;
+.container{
     display: grid;
-    gap: 5px;
-    grid-template-columns: 1fr  1fr 1fr;
-    align-items: center;
-    justify-items: center;
+    height: 700px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr 1fr 0.2fr;
     grid-template-areas: 
-    "header header header header"
-     "content content content content"
-     "content content content content"
-     "content content content content"
-     "content content content content"
-     "content content content content"
-     "content content content content"
-     "footer footer footer footer"
+    "nav nav nav nav"
+    "sidebar main main main"
+    "sidebar content1 content2 content3"
+    "sidebar footer footer footer"
     ;
+    grid-gap: 4px;
+    font-family: 'Trebuchet MS';
+    text-align: center;
 }
-header{
-    background-color: yellow;
-    grid-area: header;
+nav{
+    background-color: aqua;
+    grid-area: nav;
 }
-#title{
+main{
+    background-color: aquamarine;
+    grid-area: main;
+}
+#content1{
     background-color: lightblue;
+    grid-area: content1;
 }
-#meta{
-    background-color: lightgreen;
+#content2{
+    background-color: aliceblue;
+    grid-area: content2;
 }
-#content{
-    background-color: gainsboro;
+#content3{
+    background-color: aqua;
+    grid-area: content3;
 }
-#contentimg{
-    background-color: rgb(255, 251, 0);
-}
-#bar{
-    background-color: orange;
-}
-#ads{
-    background-color: green;
-}
-#other{
-    background-color: magenta;
+#sidebar{
+    background-color: aqua;
+    grid-area: sidebar;
 }
 footer{
     background-color: burlywood;
     grid-area: footer;
 }
-nav{
-     grid-area: nav;
-     background-color: palevioletred;
-}
-article{
-   grid-area: content;
+@media screen and (max-width:525px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr;
+        grid-template-areas: 
+        "nav"
+        "sidebar"
+        "main"
+        "content1"
+        "content2"
+        "content3"
+        "footer"
+        ;
+    }
 }
